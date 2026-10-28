@@ -155,7 +155,8 @@ npx vercel --prod --yes
 O DNS no Registro.br é migrado para `ns1/ns2.vercel-dns.com`, tornando o hPanel desnecessário.
 
 > **Ação pendente:** abrir ticket no Agente Hostinger solicitando a remoção definitiva dos sites
-> e o cancelamento do pedido de R$ 623,88. Registrar o número do ticket aqui quando existir.
+> e o cancelamento do pedido de R$ 623,88. **Status: ainda não aberto** — usuário precisa acessar hPanel e solicitar via Agente Hostinger.
+> **Nota 28/10/2026:** site corrigido (imagem removida, pronta entrega no Brasil); deploy Vercel feito (`aleximportsmt.vercel.app`); nameservers ainda precisam ser alterados no Registro.br; domínio `.com.br` ainda precisa ser adicionado no Vercel.
 
 ---
 
