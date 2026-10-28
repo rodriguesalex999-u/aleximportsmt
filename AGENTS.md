@@ -242,7 +242,7 @@ npx serve .          # http://localhost:3000
 | 27/10/2026 | Nameservers | Planejado: `orbit/horizon.dns-parking.com` → `ns1/ns2.vercel-dns.com` |
 | 28/10/2026 | Vercel — domínio adicionado | `aleximportsmt.com.br` adicionado ao projeto Vercel; nameservers ainda precisam ser alterados no Registro.br |
 | 28/10/2026 | Registro.br — nameservers alterados | `orbit/horizon.dns-parking.com` → `ns1.vercel-dns.com` / `ns2.vercel-dns.com`; confirmado e salvo |
-| 28/10/2026 | SAC UOL — investigação | Acessado perfil Alex Rodrigues Fernandes de Melo; "Meus débitos" vazio; nenhuma cobrança visível; chamado/chat disponíveis mas requerem interação do usuário |
+| 28/10/2026 | SAC UOL — investigação completa | Perfil acessado; "Meus débitos" vazio; nenhum débito visível; contrato "UOL Oferta Visitante" ativo desde 28/09/2016; chat/chamado disponíveis mas requerem interação do usuário; usuário pediu reclamação de reembolso + remoção de cartão vinculado + cancelamento |
 | 28/10/2026 | Hostinger — chamado enviado | Mensagem enviada ao Agente Hostinger solicitando remoção do site + cancelamento do pedido R$ 623,88 |
 | 28/10/2026 | Site HTML criado | `index.html` elegante (Playfair + Inter, tema escuro dourado, Fale Conosco + WhatsApp 65 9294-2810) |
 
