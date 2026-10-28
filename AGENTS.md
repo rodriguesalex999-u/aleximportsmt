@@ -241,7 +241,7 @@ npx serve .          # http://localhost:3000
 | 27/10/2026 | Login no Registro.br | Acesso ao painel `ARFME44` recuperado com sucesso pelo titular |
 | 27/10/2026 | Nameservers | Planejado: `orbit/horizon.dns-parking.com` → `ns1/ns2.vercel-dns.com` |
 | 28/10/2026 | Vercel — domínio adicionado | `aleximportsmt.com.br` adicionado ao projeto Vercel; nameservers ainda precisam ser alterados no Registro.br |
-| 28/10/2026 | Registro.br — login pendente | CAPTCHA "SOU HUMANO" precisa ser resolvido pelo titular para enviar lembrete de senha e alterar nameservers |
+| 28/10/2026 | Registro.br — login resolvido | CAPTCHA resolvido; usuário logado; nameservers ainda precisam ser alterados manualmente (seção DNS do domínio) |
 | 28/10/2026 | Hostinger — chamado pendente | Ainda não aberto; usuário precisa acessar hPanel e solicitar via Agente Hostinger |
 | 28/10/2026 | Site HTML criado | `index.html` elegante (Playfair + Inter, tema escuro dourado, Fale Conosco + WhatsApp 65 9294-2810) |
 
