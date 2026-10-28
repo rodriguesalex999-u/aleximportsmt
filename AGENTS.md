@@ -239,7 +239,8 @@ npx serve .          # http://localhost:3000
 | 27/10/2026 | Criação do projeto | Site criado do zero; infraestrutura mapeada (Registro.br, GitHub, Vercel, Hostinger) |
 | 27/10/2026 | Login no Registro.br | Acesso ao painel `ARFME44` recuperado com sucesso pelo titular |
 | 27/10/2026 | Nameservers | Planejado: `orbit/horizon.dns-parking.com` → `ns1/ns2.vercel-dns.com` |
-| 27/10/2026 | Hostinger | Plano Business expirado; pedido de R$ 623,88 pendente e **não deve ser pago** |
+| 28/10/2026 | Deploy Vercel | Site `aleximportsmt` publicado; URL de produção: `https://aleximportsmt.vercel.app` (alias); repo GitHub `rodriguesalex999-u/aleximportsmt` conectado |
+| 28/10/2026 | Site HTML criado | `index.html` elegante (Playfair + Inter, tema escuro dourado, Fale Conosco + WhatsApp 65 9294-2810) |
 
 ---
 
