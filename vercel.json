@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/c/:slug", "destination": "/index.html" },
+    { "source": "/p/:slug", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/imagens/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
+    { "source": "/videos/(.*)",  "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ]
+}

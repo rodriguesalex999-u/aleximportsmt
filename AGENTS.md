@@ -53,9 +53,9 @@ Atualize este arquivo **na mesma alteração** em que a infraestrutura mudar. Ou
 |---|---|
 | Nome do projeto | SITE ALEX IMPORTS MT |
 | Empresa | Alex Imports MT |
-| Tipo | Site institucional estático (HTML + CSS + JS em arquivo único) |
-| Finalidade | Site de apresentação com canal de contato via WhatsApp |
-| Workspace local | `C:\Users\rodri\OneDrive\Documents\SITE ALEX IMPORTS MT` |
+| Tipo | Loja online multiprodutos estática (HTML + CSS + JS em arquivo único) — desde 01/11/2026 |
+| Finalidade | Vitrine de produtos estilo AliExpress, sem login; pedido finalizado pelo WhatsApp (pagamento online: futuro) |
+| Workspace local | `G:\Meu Drive\GERAL\SITE ALEX IMPORTS MT` (Google Drive) — antes: `C:\Users\rodri\OneDrive\Documents\SITE ALEX IMPORTS MT` |
 | Repositório Git | `https://github.com/rodriguesalex999-u/aleximportsmt` |
 | Deploy | Vercel (projeto `aleximportsmt`) |
 | Domínio de produção | `https://aleximportsmt.com.br` |
@@ -140,7 +140,21 @@ git push origin main  →  Vercel detecta o push  →  build  →  produção em
 npx vercel --prod --yes
 ```
 
-### 2.4 Hostinger — hPanel (serviço em desativação)
+### 2.4 Cloudflare R2 — fotos e vídeos dos produtos
+
+| Item | Valor |
+|---|---|
+| Conta | Cloudflare do titular (`rodriguesalex999@gmail.com`) |
+| Bucket | `alex-imports-mt` (criado em 01/11/2026; separado do bucket `etevalda`) |
+| Pastas | `imagens/` (WebP 1080×1080) e `videos/` (MP4 720×720) |
+| Plano | Gratuito: 10 GB, 1 milhão de envios e 10 milhões de leituras/mês, sem custo de tráfego |
+| Link público | **PENDENTE** — o titular precisa clicar em Settings → Public Development URL → Enable |
+
+Enquanto o link público não estiver ativo, as mídias são servidas pela Vercel (pastas
+`imagens/` e `videos/` do repositório). Depois de ativar: trocar `IMG_BASE` e `VIDEO_BASE`
+no `index.html` pelo endereço `https://pub-XXXX.r2.dev/...`.
+
+### 2.5 Hostinger — hPanel (serviço em desativação)
 
 | Item | Valor |
 |---|---|
@@ -164,10 +178,12 @@ O DNS no Registro.br é migrado para `ns1/ns2.vercel-dns.com`, tornando o hPanel
 
 ```
 SITE ALEX IMPORTS MT/
-├── AGENTS.md          ← este arquivo (fonte única de verdade; manter atualizado)
-├── index.html         ← site completo: HTML + CSS + JS em arquivo único
-├── README.md          ← instruções de publicação para humanos
-├── .gitignore
+├── AGENTS.md          ← este arquivo (infraestrutura; manter atualizado)
+├── PROJETO.md         ← design aprovado, como cadastrar produto, padrão de fotos e vídeos
+├── index.html         ← loja completa: HTML + CSS + JS + catálogo (PRODUTOS/CATEGORIAS)
+├── vercel.json        ← links /c/<categoria> e /p/<produto> + cache das mídias
+├── imagens/           ← fotos dos produtos (WebP 1080×1080)
+├── videos/            ← vídeos dos produtos (MP4 720×720, leves)
 └── .git/              ← repositório Git (remote: origin → GitHub)
 ```
 
@@ -187,8 +203,11 @@ sem build step, sem dependências e sem risco de bundle quebrado.
 | Link WhatsApp | `https://wa.me/556592942810` |
 | Link WhatsApp com mensagem | `https://wa.me/556592942810?text=Olá!%20Gostaria%20de%20um%20orçamento.` |
 | Idioma | Português (pt-BR) |
-| Paleta | Escuro premium com detalhes em dourado (`#d4af37` / `#f5d67b`) |
-| Fontes | Google Fonts — `Playfair Display` (títulos) + `Inter` (corpo) |
+| Paleta | Azul-marinho `#0b1f3a` + laranja `#ff6a00` (fundo `#f4f5f7`) — antes: escuro dourado (DESATIVADO em 01/11/2026) |
+| Fontes | Google Fonts — `Outfit` |
+| Links de categoria | `https://aleximportsmt.com.br/c/<categoria>` (ex.: `/c/relogio-masculino`, `/c/junta-motor`) |
+| Links de produto | `https://aleximportsmt.com.br/p/<id-do-produto>` |
+| Pedido | Carrinho → "Finalizar pelo WhatsApp" (mensagem com itens e total) |
 
 ---
 
@@ -223,8 +242,9 @@ npx serve .          # http://localhost:3000
 
 - [ ] `index.html` abre sem erro no console do navegador
 - [ ] Layout responsivo em 360px, 768px e 1440px
-- [ ] Botão do WhatsApp abre `wa.me/556592942810` com número correto
-- [ ] Seções "Fale Conosco" presentes e com CTA funcional
+- [ ] "Finalizar pelo WhatsApp" abre `wa.me/556592942810` com o pedido escrito
+- [ ] Links `/c/...` e `/p/...` abrem a categoria/produto certo; botão Voltar do celular fecha o produto
+- [ ] Vídeo do produto toca sozinho (sem som) e as fotos deslizam no celular
 - [ ] `git status` limpo após commit
 - [ ] Push para `main` feito
 - [ ] Deploy verde na Vercel
@@ -245,6 +265,8 @@ npx serve .          # http://localhost:3000
 | 28/10/2026 | SAC UOL — chamado aberto | Mensagem enviada via campo de busca SAC (sac.uol.com.br): solicitação de cancelamento contrato UOL Oferta Visitante (ativo 28/09/2016), reembolso, remoção cartão vinculado, explicações; chat/chamado requerem interação; nenhum débito visível no SAC |
 | 28/10/2026 | Hostinger — chamado enviado | Mensagem enviada ao Agente Hostinger solicitando remoção do site + cancelamento do pedido R$ 623,88 |
 | 28/10/2026 | Site HTML criado | `index.html` elegante (Playfair + Inter, tema escuro dourado, Fale Conosco + WhatsApp 65 9294-2810) |
+| 01/11/2026 | Site vira loja multiprodutos | Novo `index.html` (estilo AliExpress, azul-marinho/laranja), `vercel.json` com links `/c/` e `/p/`, pastas `imagens/` e `videos/`, `PROJETO.md`. Workspace local passa a ser `G:\Meu Drive\GERAL\SITE ALEX IMPORTS MT` |
+| 01/11/2026 | Cloudflare R2 | Bucket `alex-imports-mt` criado para fotos e vídeos; link público ainda pendente |
 
 ---
 

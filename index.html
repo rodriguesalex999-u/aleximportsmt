@@ -2,107 +2,600 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alex Imports MT — Importação Premium</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alex Imports MT — Ofertas</title>
+<meta name="description" content="Alex Imports MT: ofertas em relógios, peças e muito mais. Compra rápida, sem cadastro, com envio para todo o Brasil.">
+<meta name="theme-color" content="#0b1f3a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alex Imports MT">
+<meta property="og:title" content="Alex Imports MT — Ofertas">
+<meta property="og:description" content="Compra rápida, sem cadastro. Envio para todo o Brasil saindo de Cuiabá · MT.">
+<meta property="og:image" content="https://aleximportsmt.com.br/imagens/relogio-poedagar-data-prova-dagua-1.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#d4af37;--gold-light:#f5d67b;--ink:#0a0a0c;--surface:#111114;--surface-2:#18181f;--text:#f0ede8;--text-dim:#a8a49a;--radius:18px;--shadow:0 24px 60px rgba(212,175,55,0.08);}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--text);line-height:1.55;overflow-x:hidden}
-img{max-width:100%;display:block}
-::selection{background:rgba(212,175,55,0.25);color:#fff}
-header{position:sticky;top:0;z-index:100;background:rgba(10,10,12,0.85);backdrop-filter:blur(14px) saturate(120%);border-bottom:1px solid rgba(212,175,55,0.08)}
-.header-inner{max-width:1100px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--gold);letter-spacing:0.02em;text-decoration:none}
-.logo span{color:var(--text);font-weight:400;font-style:italic}
-nav a{color:var(--text-dim);text-decoration:none;font-size:0.88rem;margin-left:28px;transition:color .2s}
-nav a:hover{color:var(--gold)}
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(212,175,55,0.12),transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:2;max-width:800px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.5rem);line-height:1.05;color:var(--text);letter-spacing:-0.03em;margin-bottom:18px}
-.hero h1 em{font-style:italic;color:var(--gold);display:block}
-.hero p{font-size:1.15rem;color:var(--text-dim);max-width:560px;margin:0 auto 36px;font-weight:300}
-.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:100px;font-weight:500;font-size:0.95rem;text-decoration:none;transition:transform .15s,box-shadow .2s}
-.btn-primary{background:linear-gradient(135deg,var(--gold),#b08d2e);color:#0a0a0c;box-shadow:0 10px 30px rgba(212,175,55,0.25)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,175,55,0.35)}
-.btn-ghost{border:1px solid rgba(212,175,55,0.35);color:var(--gold);background:rgba(212,175,55,0.05)}
-.btn-ghost:hover{background:rgba(212,175,55,0.12);border-color:var(--gold)}
-section{max-width:1100px;margin:0 auto;padding:100px 24px}
-.section-label{font-family:'Playfair Display',serif;color:var(--gold);font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px}
-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin-bottom:14px;color:var(--text)}
-.subtitle{color:var(--text-dim);font-size:1.05rem;max-width:640px;margin-bottom:48px;font-weight:300}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.about-text p{color:var(--text-dim);margin-bottom:14px;font-size:1.05rem}
-.about-visual{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
-.about-visual img{width:100%;height:100%;object-fit:cover;filter:brightness(0.92) contrast(1.05)}
-.about-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,12,0.6))}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.card{background:var(--surface-2);border:1px solid rgba(212,175,55,0.08);border-radius:var(--radius);padding:32px 28px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:rgba(212,175,55,0.25)}
-.card h3{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--gold);margin-bottom:10px}
-.card p{color:var(--text-dim);font-size:0.95rem}
-.contact{background:linear-gradient(180deg,var(--surface),#0f0f14);border-top:1px solid rgba(212,175,55,0.08);border-bottom:1px solid rgba(212,175,55,0.08)}
-.contact-inner{max-width:720px;margin:0 auto;text-align:center}
-.contact h2{margin-bottom:10px}
-.whatsapp-btn{display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border-radius:100px;background:#25D366;color:#fff;font-weight:600;font-size:1.05rem;text-decoration:none;box-shadow:0 12px 40px rgba(37,211,102,0.25);transition:transform .15s,box-shadow .2s;margin-top:10px}
-.whatsapp-btn:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(37,211,102,0.35)}
-.contact-note{color:var(--text-dim);font-size:0.9rem;margin-top:14px}
-footer{background:var(--ink);border-top:1px solid rgba(212,175,55,0.08);padding:40px 24px;text-align:center;color:var(--text-dim);font-size:0.85rem}
-footer a{color:var(--gold);text-decoration:none}
-.fab{position:fixed;bottom:24px;right:24px;z-index:99;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.35);text-decoration:none;transition:transform .2s}
-.fab:hover{transform:scale(1.08)}
-@media(max-width:860px){.about-grid{grid-template-columns:1fr}.nav-links{display:none}}
+:root{
+  --navy:#0b1f3a; --navy2:#13305a; --orange:#ff6a00; --gold:#f5b301;
+  --bg:#f4f5f7; --card:#fff; --ink:#191c22; --muted:#6b7280; --line:#e6e8ec; --green:#0a9f5a; --wa:#25d366;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{overflow-x:hidden}
+body{font-family:Outfit,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* CABEÇALHO */
+header{background:#fff;position:sticky;top:0;z-index:30;box-shadow:0 1px 0 var(--line)}
+.top{display:flex;align-items:center;gap:22px;height:72px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px;position:relative}
+.logo-mark:after{content:"";position:absolute;right:-3px;bottom:-3px;width:13px;height:13px;border-radius:50%;background:var(--orange);border:3px solid #fff}
+.logo-txt{line-height:1}
+.logo-txt b{display:block;font-size:20px;font-weight:800;color:var(--navy);letter-spacing:-.3px}
+.logo-txt b span{color:var(--orange)}
+.logo-txt small{font-size:11px;color:var(--muted);letter-spacing:2.5px;font-weight:600}
+.search{flex:1;min-width:0;display:flex;align-items:center;border:2px solid var(--navy);border-radius:999px;height:46px;padding-left:20px;max-width:620px}
+.search input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:16px;background:none}
+.search input::-webkit-search-cancel-button{display:none}
+.search button{height:38px;width:56px;margin-right:3px;border-radius:999px;background:var(--navy);display:grid;place-items:center;flex-shrink:0}
+.hd-actions{display:flex;align-items:center;gap:18px;margin-left:auto}
+.hd-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);line-height:1.2}
+.hd-item b{display:block;color:var(--ink);font-size:13px}
+.cart-btn{position:relative;display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px}
+.cart-count{position:absolute;left:16px;top:-7px;background:var(--orange);color:#fff;font-size:11px;font-weight:700;min-width:19px;height:19px;border-radius:10px;display:grid;place-items:center;padding:0 5px;border:2px solid #fff}
+.cart-count.bump{animation:bump .4s}
+@keyframes bump{40%{transform:scale(1.35)}}
+
+/* FAIXA */
+.strip{background:var(--navy);color:#fff;font-size:14px}
+.strip .wrap{display:flex;gap:26px;align-items:center;height:40px;overflow:auto;white-space:nowrap;scrollbar-width:none}
+.strip .wrap::-webkit-scrollbar{display:none}
+.strip b{color:var(--gold)}
+.strip span{display:flex;align-items:center;gap:7px}
+
+/* BANNER */
+.hero{background:radial-gradient(120% 140% at 85% 0%,#ff9a3d 0,var(--orange) 40%,#e24b00 100%);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;border:50px solid rgba(255,255,255,.08)}
+.hero .wrap{padding:30px 20px 34px;position:relative}
+.hero-head{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.hero h1{font-size:30px;font-weight:800;letter-spacing:-.5px}
+.pill{background:rgba(255,255,255,.18);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.perk{background:#fff;color:var(--ink);border-radius:var(--r);padding:16px 18px;display:flex;gap:14px;align-items:center}
+.perk-ic{width:44px;height:44px;border-radius:12px;background:#fff3ea;display:grid;place-items:center;flex-shrink:0;font-size:20px}
+.perk b{display:block;font-size:16px}
+.perk small{color:var(--muted);font-size:13px}
+
+/* SEÇÕES */
+section{padding:34px 0 8px}
+.sec-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.sec-title h2{font-size:28px;font-weight:800;letter-spacing:-.4px}
+.sec-title p{color:var(--muted);font-size:14px}
+.share{display:none;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--navy);background:#e9edf5;padding:9px 14px;border-radius:999px}
+.share.show{display:flex}
+
+/* CATEGORIAS */
+.cats{display:flex;gap:10px;overflow:auto;padding:8px 0 10px;scrollbar-width:none;position:sticky;top:112px;z-index:20;background:var(--bg)}
+.cats::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;padding:11px 20px;border-radius:999px;background:#e3e6eb;font-weight:600;font-size:15px;color:#3b4150;transition:.15s}
+.chip:hover{background:#d8dce3}
+.chip.on{background:var(--navy);color:#fff}
+.chip em{font-style:normal;opacity:.6;margin-left:4px;font-size:13px}
+.cat-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:6px}
+.cat-card{background:#fff;border-radius:var(--r);padding:14px;display:flex;align-items:center;gap:14px;border:1px solid var(--line);transition:.15s}
+.cat-card:hover{border-color:var(--navy);transform:translateY(-2px)}
+.cat-card img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#f2f3f5}
+.cat-card b{display:block;font-size:16px}
+.cat-card small{color:var(--muted)}
+
+/* GRADE */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:box-shadow .18s,transform .18s;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 10px 30px rgba(11,31,58,.12);transform:translateY(-3px)}
+.thumb{position:relative;aspect-ratio:1;background:#f2f3f5;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:opacity .25s,transform .4s}
+.thumb .alt{position:absolute;inset:0;opacity:0}
+@media (hover:hover){.card:hover .thumb .alt{opacity:1}.card:hover .thumb img{transform:scale(1.03)}}
+.tag{position:absolute;left:10px;top:10px;background:var(--navy);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:6px;letter-spacing:.3px}
+.vtag{position:absolute;right:10px;top:10px;background:rgba(0,0,0,.65);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:6px;display:flex;gap:5px;align-items:center}
+.add{position:absolute;right:10px;bottom:10px;width:42px;height:42px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.15);transition:.15s}
+.add:hover{background:var(--orange)}
+.add:hover svg{stroke:#fff}
+.info{padding:12px 14px 16px;display:flex;flex-direction:column;gap:7px;flex:1}
+.cat-lbl{font-size:12px;color:var(--orange);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.name{font-size:15px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:39px}
+.price{font-size:22px;font-weight:800;margin-top:auto}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px 0}
+
+/* CONFIANÇA */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0 0}
+.trust div{background:#fff;border-radius:var(--r);padding:20px;text-align:center}
+.trust b{display:block;margin:10px 0 3px}
+.trust small{color:var(--muted)}
+
+footer{background:var(--navy);color:#cfd6e2;margin-top:50px;padding:36px 0 calc(36px + env(safe-area-inset-bottom));font-size:14px;line-height:1.6}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff}
+footer a{color:#fff;text-decoration:underline}
+
+/* FOLHA DO PRODUTO */
+.overlay{position:fixed;inset:0;background:rgba(10,15,25,.55);z-index:50;opacity:0;pointer-events:none;transition:opacity .2s}
+.overlay.open{opacity:1;pointer-events:auto}
+#cov{z-index:58}
+.sheet{position:fixed;z-index:55;left:50%;top:50%;width:min(1040px,calc(100% - 40px));height:min(860px,92vh);transform:translate(-50%,-46%);opacity:0;visibility:hidden;transition:transform .25s,opacity .2s,visibility .25s;background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.sheet.open{transform:translate(-50%,-50%);opacity:1;visibility:visible}
+.sheet-scroll{overflow:auto;overscroll-behavior:contain;flex:1;-webkit-overflow-scrolling:touch}
+.sheet-top{display:none}
+.x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;background:rgba(241,242,244,.95);display:grid;place-items:center;z-index:3;font-size:22px;line-height:1}
+.pdp{display:grid;grid-template-columns:1.05fr 1fr;align-items:start}
+.gal{padding:24px;display:flex;gap:12px;position:sticky;top:0}
+.gal-th{display:flex;flex-direction:column;gap:10px}
+.th{position:relative;width:64px;height:64px;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;background:#f2f3f5;flex-shrink:0}
+.th img{width:100%;height:100%;object-fit:cover}
+.th.on{border-color:var(--orange)}
+.th-play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.2)}
+.slides-wrap{flex:1;position:relative;min-width:0}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:14px;aspect-ratio:1;background:#f2f3f5;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;position:relative}
+.slide img,.slide video,.slide iframe{width:100%;height:100%;object-fit:cover;display:block;border:0}
+.slide video,.slide iframe{background:#000}
+.count{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;pointer-events:none}
+.snd{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600}
+.pd{padding:30px 30px 30px 10px;display:flex;flex-direction:column;gap:14px}
+.pd h2{font-size:24px;line-height:1.25;font-weight:700}
+.pd .price{font-size:34px}
+.pricebox{background:#fff6ef;border-radius:12px;padding:16px 18px}
+.pricebox small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.pd ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.pd li{display:flex;gap:9px}
+.pd li:before{content:"✓";color:var(--green);font-weight:800}
+.qty{display:flex;align-items:center;gap:14px}
+.qty div{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px}
+.qty button{width:42px;height:42px;font-size:20px}
+.qty span{width:36px;text-align:center;font-weight:700}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{height:52px;border-radius:999px;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 12px}
+.btn-buy{background:var(--orange);color:#fff}
+.btn-buy:hover{background:#ec5f00}
+.btn-cart{background:#fff1e6;color:var(--orange)}
+.btn-wa{background:var(--wa);color:#fff}
+.desc{font-size:15px;color:#424857;line-height:1.6;border-top:1px solid var(--line);padding-top:14px}
+.more{padding:8px 24px 30px;background:var(--bg)}
+.cc2[hidden]{display:none!important}
+.more h3{font-size:22px;font-weight:800;margin:18px 0 14px}
+.more .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+.buybar{display:none}
+
+/* CARRINHO */
+.drawer{position:fixed;top:0;right:0;height:100%;width:400px;max-width:100%;background:#fff;z-index:60;transform:translateX(100%);visibility:hidden;transition:transform .25s,visibility .25s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.15)}
+.drawer.open{transform:none;visibility:visible}
+.dr-h{display:flex;justify-content:space-between;align-items:center;padding:calc(20px + env(safe-area-inset-top)) 20px 20px;border-bottom:1px solid var(--line)}
+.dr-h b{font-size:20px}
+.dr-x{width:40px;height:40px;border-radius:50%;background:#f1f2f4;font-size:22px}
+.dr-list{flex:1;overflow:auto;padding:10px 20px}
+.ci{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.ci img{width:72px;height:72px;border-radius:10px;object-fit:cover}
+.ci > div{flex:1;font-size:14px;display:flex;flex-direction:column;gap:6px}
+.ci-q{display:flex;align-items:center;gap:10px}
+.ci-q button{width:32px;height:32px;border-radius:8px;background:#f1f2f4;font-size:16px}
+.ci .rm{background:none;width:auto;color:var(--muted);font-size:12px;text-decoration:underline;margin-left:auto}
+.dr-f{padding:20px 20px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:grid;gap:12px}
+.tot{display:flex;justify-content:space-between;font-size:18px;font-weight:800}
+.note{font-size:12px;color:var(--muted);text-align:center}
+.toast{position:fixed;left:50%;bottom:90px;opacity:0;pointer-events:none;transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:13px 22px;border-radius:999px;font-weight:600;z-index:80;transition:.3s;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* CELULAR */
+@media (max-width:860px){
+  .hd-item{display:none}
+  .top{gap:12px;height:64px}
+  .cats{top:104px}
+  .logo-txt small{display:none}
+  .perks{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr 1fr}
+  .grid,.more .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .sec-title h2{font-size:23px}
+  /* produto em tela cheia, como app */
+  .sheet{left:0;top:0;width:100%;height:100%;border-radius:0;transform:translateY(100%);opacity:1}
+  .sheet.open{transform:none}
+  .sheet-top{display:flex;align-items:center;gap:10px;position:absolute;top:0;left:0;right:0;z-index:4;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;pointer-events:none}
+  .sheet-top button{pointer-events:auto;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.12);position:relative}
+  .sheet-top .sp{flex:1}
+  .sheet-top .cc2{position:absolute;right:-2px;top:-2px;background:var(--orange);color:#fff;font-size:10px;font-weight:700;min-width:17px;height:17px;border-radius:9px;display:grid;place-items:center;padding:0 4px}
+  .x{display:none}
+  .pdp{grid-template-columns:1fr}
+  .gal{padding:0;position:static}
+  .gal-th{display:none}
+  .slides{border-radius:0}
+  .pd{padding:18px 16px 8px}
+  .pd h2{font-size:19px}
+  .pd .price{font-size:28px}
+  .pd .btns{display:none}
+  .more{padding:4px 12px 110px}
+  .more h3{font-size:19px}
+  .buybar{display:flex;gap:8px;align-items:center;position:absolute;left:0;right:0;bottom:0;z-index:5;background:#fff;border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom))}
+  .buybar .bb-cart{width:52px;height:50px;border-radius:12px;background:#fff1e6;display:grid;place-items:center;flex-shrink:0}
+  .buybar .btn{flex:1;height:50px}
+}
+@media (max-width:560px){
+  .logo-txt{display:none}
+  .hero h1{font-size:24px}
+  .price{font-size:19px}
+  .cart-btn .lbl{display:none}
+  .wrap{padding:0 14px}
+  .name{font-size:14px}
+}
 </style>
 </head>
 <body>
+
 <header>
-<div class="header-inner">
-<a href="#" class="logo">Alex <span>Imports MT</span></a>
-<nav aria-label="Principal"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#contato">Fale Conosco</a></nav>
-</div>
+  <div class="wrap top">
+    <a class="logo" href="./" onclick="event.preventDefault();go('todos')" aria-label="Alex Imports MT — início">
+      <div class="logo-mark">AI</div>
+      <div class="logo-txt"><b>Alex <span>Imports</span></b><small>MATO GROSSO</small></div>
+    </a>
+    <form class="search" role="search" onsubmit="event.preventDefault();$('q').blur();render();$('lista').scrollIntoView({behavior:'smooth'})">
+      <input id="q" type="search" enterkeyhint="search" placeholder="O que você está procurando hoje?" oninput="render()" aria-label="Buscar produtos">
+      <button aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </form>
+    <div class="hd-actions">
+      <div class="hd-item"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#191c22" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div>Enviamos de<b>Cuiabá · MT</b></div></div>
+      <button class="cart-btn" onclick="openCart()" aria-label="Abrir carrinho"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#191c22" stroke-width="1.8" stroke-linecap="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.2"/><circle cx="17" cy="20.5" r="1.2"/></svg><span class="cart-count" id="cc">0</span><span class="lbl">Carrinho</span></button>
+    </div>
+  </div>
+  <div class="strip"><div class="wrap">
+    <span>⚡ <b>Compra rápida</b> — sem cadastro e sem senha</span>
+    <span>📦 Enviamos para todo o Brasil</span>
+    <span>💬 Atendimento pelo WhatsApp</span>
+  </div></div>
 </header>
-<main>
-<section class="hero" aria-label="Apresentação">
-<div class="hero-inner">
-<h1>Alex Imports <em>MT</em></h1>
-<p>Produtos selecionados com pronta entrega no Brasil. Atendimento direto de Cuiabá — qualidade sem complicação.</p>
-<div class="cta-row">
-<a href="#contato" class="btn btn-primary">Fale Conosco</a>
-<a href="https://wa.me/556592942810?text=Olá!%20Gostaria%20de%20um%20orçamento." class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp</a>
-</div>
-</div>
-</section>
-<section id="servicos" aria-label="Serviços">
-<span class="section-label">Serviços</span>
-<h2>O que entregamos</h2>
-<p class="subtitle">Importação organizada, atendimento direto e produtos que valem a pena.</p>
-<div class="cards">
-<article class="card"><h3>Produtos com Pronta Entrega</h3><p>Todos os produtos já estão no Brasil, com pronta entrega e sem espera de importação.</p></article>
-<article class="card"><h3>Entrega Nacional</h3><p>Envio confiável para todo o Brasil, com rastreamento e suporte.</p></article>
-<article class="card"><h3>Atendimento Personalizado</h3><p>Fale direto pelo WhatsApp. Orçamento rápido, sem burocracia.</p></article>
-</div>
-</section>
-<section id="contato" class="contact" aria-label="Contato">
-<div class="contact-inner">
-<span class="section-label">Contato</span>
-<h2>Fale Conosco</h2>
-<p class="subtitle">Quer um orçamento? Mande uma mensagem pelo WhatsApp — respondemos rápido.</p>
-<a href="https://wa.me/556592942810?text=Olá!%20Gostaria%20de%20um%20orçamento." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Abrir WhatsApp para orçamento">
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-WhatsApp — (65) 9294-2810
-</a>
-<p class="contact-note">Horário de atendimento: segunda a sexta, das 8h às 18h.</p>
-</div>
-</section>
+
+<div class="hero"><div class="wrap">
+  <div class="hero-head"><h1>SuperOfertas Alex Imports</h1><span class="pill">🔥 Novidades toda semana</span></div>
+  <div class="perks">
+    <div class="perk"><div class="perk-ic">🛒</div><div><b>Sem login</b><small>Escolheu, comprou. Simples assim.</small></div></div>
+    <div class="perk"><div class="perk-ic">💬</div><div><b>Fale com a loja</b><small>Finalize seu pedido pelo WhatsApp</small></div></div>
+    <div class="perk"><div class="perk-ic">🚚</div><div><b>Envio para todo Brasil</b><small>Saindo de Mato Grosso</small></div></div>
+  </div>
+</div></div>
+
+<main class="wrap">
+  <section>
+    <div class="sec-title"><h2>Compre por categoria</h2></div>
+    <div class="cat-cards" id="catCards"></div>
+  </section>
+
+  <section id="lista">
+    <div class="sec-title">
+      <div><h2 id="gridTitle">Ofertas do dia</h2><p id="gridSub">Selecionados para você</p></div>
+      <button class="share" id="shareBtn" onclick="copyLink()">🔗 Copiar link desta categoria</button>
+    </div>
+    <div class="cats" id="chips"></div>
+    <div class="grid" id="grid" style="margin-top:8px"></div>
+  </section>
+
+  <div class="trust">
+    <div>📍<b>Loja de Cuiabá</b><small>Alex Imports MT</small></div>
+    <div>⚡<b>Sem cadastro</b><small>Compre em segundos</small></div>
+    <div>📦<b>Envio nacional</b><small>Para todo o Brasil</small></div>
+    <div>💬<b>Suporte humano</b><small>Fale com a gente</small></div>
+  </div>
 </main>
-<footer>
-<p>Alex Imports MT — <a href="https://wa.me/556592942810">WhatsApp (65) 9294-2810</a></p>
-<p style="margin-top:6px;opacity:.7">Site estático hospedado na Vercel · Domínio registrado no Registro.br</p>
-</footer>
-<a href="https://wa.me/556592942810" class="fab" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+
+<footer><div class="wrap">
+  <div><b>Alex Imports MT</b><br>Cuiabá · Mato Grosso<br>WhatsApp: <a href="https://wa.me/556592942810" target="_blank" rel="noopener">(65) 9294-2810</a></div>
+  <div>© 2026 Alex Imports MT. Todos os direitos reservados.</div>
+</div></footer>
+
+<!-- FOLHA DO PRODUTO -->
+<div class="overlay" id="ov" onclick="closeP()"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Produto">
+  <div class="sheet-top">
+    <button onclick="closeP()" aria-label="Voltar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191c22" stroke-width="2.4" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="sp"></span>
+    <button onclick="openCart()" aria-label="Carrinho"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191c22" stroke-width="2" stroke-linecap="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.2"/><circle cx="17" cy="20.5" r="1.2"/></svg><span class="cc2" id="cc2" hidden>0</span></button>
+  </div>
+  <button class="x" onclick="closeP()" aria-label="Fechar">×</button>
+  <div class="sheet-scroll" id="sheetScroll"></div>
+  <div class="buybar" id="buybar"></div>
+</div>
+
+<!-- CARRINHO -->
+<div class="overlay" id="cov" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer" aria-label="Carrinho">
+  <div class="dr-h"><b>Seu carrinho</b><button class="dr-x" onclick="closeCart()" aria-label="Fechar carrinho">×</button></div>
+  <div class="dr-list" id="cl"></div>
+  <div class="dr-f">
+    <div class="tot"><span>Total</span><span id="ct">R$ 0,00</span></div>
+    <button class="btn btn-wa" onclick="checkout()"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Finalizar pelo WhatsApp</button>
+    <div class="note">Sem cadastro, sem senha. Você combina pagamento e entrega direto com a loja.</div>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===================== CONFIGURAÇÃO =====================
+   Fotos e vídeos. Quando o link público do Cloudflare R2 (bucket alex-imports-mt)
+   estiver ativo, troque IMG_BASE e VIDEO_BASE pelo endereço do R2. */
+const HOST_PROD = /(^|\.)aleximportsmt\.com\.br$|vercel\.app$|^localhost$/.test(location.hostname);
+const ROOT = HOST_PROD ? "/" : "";             // no site oficial os links são /c/... e /p/...
+const IMG_BASE = ROOT + "imagens/";
+const VIDEO_BASE = ROOT + "videos/";
+const WHATSAPP = "556592942810";
+
+/* ===================== CATÁLOGO =====================
+   Para cadastrar um produto novo, copie um bloco e altere os dados. */
+const CATEGORIAS = [
+  { id: "junta-motor",       nome: "Junta Motor",       icone: "⚙️" },
+  { id: "relogio-masculino", nome: "Relógio Masculino", icone: "⌚" }
+];
+
+const PRODUTOS = [
+  {
+    id: "relogio-poedagar-data-prova-dagua",
+    nome: "Relógio Masculino Poedagar Função Data Prova d'Água",
+    categoria: "relogio-masculino",
+    preco: 289.00,
+    selo: "NOVO",
+    video: "relogio-poedagar-data-prova-dagua.mp4",   // aparece primeiro na página do produto
+    youtube: "v9oz63v_ScM",                         // reserva: usado só se o vídeo não carregar
+    imagens: [
+      "relogio-poedagar-data-prova-dagua-1.webp",
+      "relogio-poedagar-data-prova-dagua-2.webp",
+      "relogio-poedagar-data-prova-dagua-3.webp",
+      "relogio-poedagar-data-prova-dagua-4.webp"
+    ],
+    destaques: [
+      "Caixa octogonal e pulseira em aço inoxidável",
+      "Mostrador azul com textura horizontal e data",
+      "Ponteiros e marcadores luminosos (brilham no escuro)",
+      "Resistente à água"
+    ],
+    descricao: "Relógio Poedagar de estilo clássico e sofisticado: caixa octogonal prateada, mostrador azul com textura em linhas horizontais e calendário de data. Os ponteiros e marcadores brilham no escuro, facilitando a leitura à noite, e a pulseira de aço inoxidável dá acabamento elegante para o trabalho, eventos e o dia a dia."
+  },
+  {
+    id: "relogio-poedagar-elite-tempus",
+    nome: "Relógio Masculino Poedagar Elite Tempus",
+    categoria: "relogio-masculino",
+    preco: 299.99,
+    selo: "NOVO",
+    imagens: [
+      "relogio-poedagar-elite-tempus-1.webp",
+      "relogio-poedagar-elite-tempus-2.webp",
+      "relogio-poedagar-elite-tempus-3.webp",
+      "relogio-poedagar-elite-tempus-4.webp"
+    ],
+    destaques: [
+      "Mostrador azul com subdiais e calendário",
+      "Caixa em aço com acabamento prateado",
+      "Pulseira em couro marrom com costura"
+    ],
+    descricao: "O Poedagar Elite Tempus une visual esportivo e elegante: mostrador azul com três subdiais, janela de data, caixa prateada e pulseira de couro marrom. Combina com o dia a dia e com ocasiões especiais."
+  },
+  {
+    id: "kit-junta-coletor-mufla-jet-yamaha-700",
+    nome: "Kit Junta Coletor + Junta Mufla Jet Yamaha 700 Carburação Dupla",
+    categoria: "junta-motor",
+    preco: 78.00,
+    selo: "PEÇA",
+    imagens: ["kit-junta-coletor-mufla-jet-yamaha-700-1.webp"],
+    destaques: [
+      "Kit com junta do coletor e junta da mufla",
+      "Para jet ski Yamaha 700 com carburação dupla",
+      "Ideal para manutenção e revisão do motor"
+    ],
+    descricao: "Kit de juntas para o sistema de escape do jet ski Yamaha 700 de carburação dupla. Inclui a junta do coletor e a junta da mufla, garantindo vedação na montagem e evitando vazamentos após a manutenção."
+  }
+];
+
+/* ===================== LÓGICA ===================== */
+const $ = id => document.getElementById(id);
+const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const img = f => IMG_BASE + f;
+const catNome = id => (CATEGORIAS.find(c=>c.id===id)||{}).nome || "";
+const prod = id => PRODUTOS.find(p=>p.id===id);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let catAtual = "todos", aberto = null, empurrou = false, qtd = 1;
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem("aimt_cart")||"[]").filter(c=>prod(c.id)); } catch(e) {}
+const save = () => { try { localStorage.setItem("aimt_cart", JSON.stringify(cart)); } catch(e) {} };
+
+/* ---------- Links: cada categoria e cada produto têm o seu ----------
+   Site oficial:  /c/relogio-masculino      /p/relogio-poedagar-elite-tempus
+   Prévia:        #relogio-masculino        #p-relogio-poedagar-elite-tempus      */
+function urlDe(tipo,id){
+  if(HOST_PROD) return tipo==="todos" ? "/" : (tipo==="c" ? "/c/" : "/p/") + id;
+  return tipo==="todos" ? location.pathname + location.search : "#" + (tipo==="c" ? id : "p-" + id);
+}
+function nav(url,estado){ try{ history.pushState(estado||{}, "", url); }catch(e){} }
+function lerRota(){
+  let m;
+  if(HOST_PROD && (m = location.pathname.match(/^\/(c|p)\/([\w-]+)/))) return {tipo:m[1], id:m[2]};
+  const h = decodeURIComponent(location.hash.slice(1));
+  if(h.startsWith("p-")) return {tipo:"p", id:h.slice(2)};
+  if(CATEGORIAS.some(c=>c.id===h)) return {tipo:"c", id:h};
+  return {tipo:"todos"};
+}
+function aplicarRota(){
+  const r = lerRota();
+  if(r.tipo==="p" && prod(r.id)){ openP(r.id,false); return; }
+  if(aberto) fecharFolha();
+  const cat = r.tipo==="c" && CATEGORIAS.some(c=>c.id===r.id) ? r.id : "todos";
+  if(cat!==catAtual) setCat(cat,false);
+}
+window.addEventListener("popstate", aplicarRota);
+window.addEventListener("hashchange", () => { if(!HOST_PROD) aplicarRota(); });
+
+function go(cat){ setCat(cat,true); if(cat!=="todos") $("lista").scrollIntoView({behavior:"smooth"}); else window.scrollTo({top:0,behavior:"smooth"}); }
+function setCat(id,push){
+  catAtual = id;
+  if(push) nav(urlDe(id==="todos"?"todos":"c", id));
+  document.title = id==="todos" ? "Alex Imports MT — Ofertas" : catNome(id) + " — Alex Imports MT";
+  renderCats(); render();
+}
+
+function renderCats(){
+  $("catCards").innerHTML = CATEGORIAS.map(c=>{
+    const ps = PRODUTOS.filter(p=>p.categoria===c.id);
+    return `<a class="cat-card" href="${urlDe('c',c.id)}" onclick="event.preventDefault();go('${c.id}')">
+      <img src="${img(ps[0]?.imagens[0]||'')}" alt="" width="64" height="64" loading="lazy">
+      <div><b>${c.icone} ${esc(c.nome)}</b><small>${ps.length} produto${ps.length!==1?'s':''}</small></div></a>`;
+  }).join("");
+  const chips = [{id:"todos",nome:"Recomendado"}].concat(CATEGORIAS);
+  $("chips").innerHTML = chips.map(c=>{
+    const n = c.id==="todos"?PRODUTOS.length:PRODUTOS.filter(p=>p.categoria===c.id).length;
+    return `<button class="chip ${c.id===catAtual?'on':''}" onclick="setCat('${c.id}',true)">${esc(c.nome)}<em>${n}</em></button>`;
+  }).join("");
+}
+
+function cardHTML(p,eager){
+  return `<a class="card" href="${urlDe('p',p.id)}" onclick="event.preventDefault();openP('${p.id}',true)">
+      <div class="thumb">
+        <img src="${img(p.imagens[0])}" alt="${esc(p.nome)}" width="540" height="540" ${eager?'fetchpriority="high"':'loading="lazy"'} decoding="async">
+        ${p.imagens[1]?`<img class="alt" src="${img(p.imagens[1])}" alt="" loading="lazy" decoding="async">`:""}
+        <span class="tag">${esc(p.selo)}</span>
+        ${p.video?`<span class="vtag"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="#fff"/></svg>Vídeo</span>`:""}
+        <button class="add" aria-label="Adicionar ao carrinho" onclick="event.preventDefault();event.stopPropagation();addCart('${p.id}',1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#191c22" stroke-width="2" stroke-linecap="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><path d="M13 10v4M11 12h4"/></svg></button>
+      </div>
+      <div class="info">
+        <span class="cat-lbl">${esc(catNome(p.categoria))}</span>
+        <span class="name">${esc(p.nome)}</span>
+        <span class="price">${brl(p.preco)}</span>
+      </div>
+    </a>`;
+}
+
+function render(){
+  const q = $("q").value.trim().toLowerCase();
+  const list = PRODUTOS.filter(p => (catAtual==="todos"||p.categoria===catAtual) &&
+    (!q || (p.nome+" "+catNome(p.categoria)+" "+p.descricao).toLowerCase().includes(q)));
+  $("gridTitle").textContent = catAtual==="todos" ? "Ofertas do dia" : catNome(catAtual);
+  $("gridSub").textContent = q ? `Resultados para "${q}"` : (catAtual==="todos" ? "Selecionados para você" : `${list.length} produto${list.length!==1?'s':''} nesta categoria`);
+  $("shareBtn").classList.toggle("show", catAtual!=="todos");
+  $("grid").innerHTML = list.length ? list.map((p,i)=>cardHTML(p,i<4)).join("") : `<div class="empty">Nenhum produto encontrado. Tente outra palavra.</div>`;
+}
+
+/* ---------- Página do produto (folha) ---------- */
+function midias(p){
+  const m = p.imagens.map(f=>({tipo:"img",src:f,thumb:f}));
+  if(p.video) m.unshift({tipo:"video",src:p.video,thumb:p.imagens[0]});
+  return m;
+}
+const playIcon = '<svg width="12" height="12" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="#fff"/></svg>';
+
+function openP(id,push){
+  const p = prod(id); if(!p) return;
+  if(push){ nav(urlDe("p",id),{p:id}); empurrou = true; } else if(!aberto) empurrou = false;
+  aberto = id; qtd = 1;
+  document.title = p.nome + " — Alex Imports MT";
+  const ms = midias(p);
+  const outros = PRODUTOS.filter(x=>x.id!==id).sort((a,b)=>(b.categoria===p.categoria)-(a.categoria===p.categoria));
+  $("sheetScroll").innerHTML = `
+    <div class="pdp">
+      <div class="gal">
+        <div class="gal-th">${ms.map((m,i)=>`<div class="th ${i?'':'on'}" onclick="irSlide(${i})"><img src="${img(m.thumb)}" alt="" loading="lazy">${m.tipo==='video'?`<div class="th-play">${playIcon}</div>`:''}</div>`).join("")}</div>
+        <div class="slides-wrap">
+          <div class="slides" id="slides">${ms.map((m,i)=> m.tipo==="video"
+            ? `<div class="slide"><video id="vid" src="${VIDEO_BASE+m.src}" poster="${img(p.imagens[0])}" autoplay muted loop playsinline preload="metadata"></video><button class="snd" onclick="toggleSom(this)">🔇 Ativar som</button></div>`
+            : `<div class="slide"><img src="${img(m.src)}" alt="${esc(p.nome)}" ${i?'loading="lazy"':''} decoding="async"></div>`).join("")}</div>
+          <span class="count" id="count">1/${ms.length}</span>
+        </div>
+      </div>
+      <div class="pd">
+        <span class="cat-lbl">${esc(catNome(p.categoria))}</span>
+        <h2>${esc(p.nome)}</h2>
+        <div class="pricebox"><div class="price">${brl(p.preco)}</div><small>Finalize pelo WhatsApp e combine pagamento e entrega</small></div>
+        <ul>${p.destaques.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>
+        <div class="qty">Quantidade <div><button onclick="chQ(-1)" aria-label="Diminuir">−</button><span id="qv">1</span><button onclick="chQ(1)" aria-label="Aumentar">+</button></div></div>
+        <div class="btns">
+          <button class="btn btn-buy" onclick="comprar()">Comprar agora</button>
+          <button class="btn btn-cart" onclick="addCart(aberto,qtd)">Adicionar ao carrinho</button>
+        </div>
+        <p class="desc">${esc(p.descricao)}</p>
+      </div>
+    </div>
+    ${outros.length?`<div class="more"><h3>Você também pode gostar</h3><div class="grid">${outros.map(x=>cardHTML(x,false)).join("")}</div></div>`:""}`;
+  $("buybar").innerHTML = `<button class="bb-cart" onclick="addCart(aberto,qtd)" aria-label="Adicionar ao carrinho"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff6a00" stroke-width="2" stroke-linecap="round"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><path d="M13 10v4M11 12h4"/></svg></button><button class="btn btn-buy" onclick="comprar()">Comprar agora · ${brl(p.preco)}</button>`;
+  $("sheetScroll").scrollTop = 0;
+  $("ov").classList.add("open"); $("sheet").classList.add("open"); document.body.classList.add("lock");
+  const sl = $("slides");
+  sl.addEventListener("scroll", () => {
+    const i = Math.round(sl.scrollLeft / sl.clientWidth);
+    $("count").textContent = (i+1) + "/" + ms.length;
+    document.querySelectorAll(".th").forEach((t,k)=>t.classList.toggle("on",k===i));
+    const v = $("vid"); if(v){ i===0 ? v.play().catch(()=>{}) : v.pause(); }
+  }, {passive:true});
+  const v = $("vid");
+  if(v && p.youtube){
+    v.addEventListener("error", () => {
+      v.parentNode.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${p.youtube}?autoplay=1&mute=1&loop=1&playlist=${p.youtube}&playsinline=1&rel=0" allow="autoplay; encrypted-media" allowfullscreen title="Vídeo do produto"></iframe>`;
+    });
+  }
+}
+function irSlide(i){ const sl=$("slides"); sl.scrollTo({left:i*sl.clientWidth,behavior:"smooth"}); }
+function toggleSom(b){ const v=$("vid"); if(!v) return; v.muted=!v.muted; b.textContent = v.muted ? "🔇 Ativar som" : "🔊 Som ligado"; }
+function chQ(d){ qtd=Math.max(1,qtd+d); $("qv").textContent=qtd; }
+function comprar(){ addCart(aberto,qtd,true); openCart(); }
+function fecharFolha(){
+  aberto = null;
+  const v=$("vid"); if(v) v.pause();
+  $("ov").classList.remove("open"); $("sheet").classList.remove("open");
+  if(!$("drawer").classList.contains("open")) document.body.classList.remove("lock");
+  setTimeout(()=>{ if(!aberto) $("sheetScroll").innerHTML=""; }, 260);
+  document.title = catAtual==="todos" ? "Alex Imports MT — Ofertas" : catNome(catAtual) + " — Alex Imports MT";
+}
+/* Fechar: se o produto foi aberto pelo site, o botão "voltar" do celular também fecha */
+function closeP(){
+  if(!aberto) return;
+  if(empurrou){ empurrou = false; history.back(); }
+  else { fecharFolha(); try{ history.replaceState({}, "", urlDe(catAtual==="todos"?"todos":"c", catAtual)); }catch(e){} }
+}
+
+/* ---------- Carrinho ---------- */
+function addCart(id,n,silencioso){
+  const it = cart.find(c=>c.id===id);
+  it ? it.q+=n : cart.push({id,q:n});
+  save(); renderCart();
+  const cc=$("cc"); cc.classList.remove("bump"); void cc.offsetWidth; cc.classList.add("bump");
+  if(!silencioso) toast("Adicionado ao carrinho ✓");
+}
+function chCart(id,d){ const it=cart.find(c=>c.id===id); if(!it) return; it.q+=d; if(it.q<1) cart=cart.filter(c=>c.id!==id); save(); renderCart(); }
+function rmCart(id){ cart=cart.filter(c=>c.id!==id); save(); renderCart(); }
+function total(){ return cart.reduce((s,c)=>s+prod(c.id).preco*c.q,0); }
+function renderCart(){
+  let n=0;
+  $("cl").innerHTML = cart.length ? cart.map(c=>{
+    const p=prod(c.id); n+=c.q;
+    return `<div class="ci"><img src="${img(p.imagens[0])}" alt=""><div><span>${esc(p.nome)}</span><b>${brl(p.preco*c.q)}</b>
+      <div class="ci-q"><button onclick="chCart('${p.id}',-1)" aria-label="Diminuir">−</button><b>${c.q}</b><button onclick="chCart('${p.id}',1)" aria-label="Aumentar">+</button><button class="rm" onclick="rmCart('${p.id}')">remover</button></div></div></div>`;
+  }).join("") : `<p class="empty">Seu carrinho está vazio.</p>`;
+  $("ct").textContent = brl(total());
+  $("cc").textContent = n;
+  $("cc2").textContent = n; $("cc2").hidden = !n;
+}
+function openCart(){ $("drawer").classList.add("open"); $("cov").classList.add("open"); document.body.classList.add("lock"); }
+function closeCart(){ $("drawer").classList.remove("open"); $("cov").classList.remove("open"); if(!aberto) document.body.classList.remove("lock"); }
+function checkout(){
+  if(!cart.length){ toast("Adicione um produto primeiro"); return; }
+  const linhas = cart.map(c=>{ const p=prod(c.id); return `• ${c.q}x ${p.nome} — ${brl(p.preco*c.q)}`; });
+  const msg = `Olá! Quero fazer este pedido no site Alex Imports MT:\n\n${linhas.join("\n")}\n\nTotal: ${brl(total())}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
+}
+function copyLink(){
+  const url = HOST_PROD ? location.origin + urlDe("c",catAtual) : location.href.split("#")[0] + "#" + catAtual;
+  try{ navigator.clipboard.writeText(url).then(()=>toast("Link copiado ✓"),()=>toast(url)); }catch(e){ toast(url); }
+}
+function toast(t){ const el=$("toast"); el.textContent=t; el.classList.add("show"); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove("show"),2000); }
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ if($("drawer").classList.contains("open")) closeCart(); else closeP(); } });
+
+renderCats(); renderCart(); aplicarRota(); render();
+</script>
 </body>
 </html>
